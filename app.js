@@ -185,8 +185,24 @@ let body = [ "cabeza","cuello", ...parts, "pies", "dedos" ];
 
 console.log( body );
 
+function ente( nombre ) {
+
+    if ( typeof new.target !== "undefined" ) {
+        this.nombre = nombre;
+    } else {
+        throw Error("esta función debe de ser utilizada con el new");
+    }
 
 
+    this.nombre = nombre;
+}
+
+let alguien = new ente("Chepito");
+
+let noAlguien = ente.call( alguien,"Parchita");
+
+// console.log( alguien );
+// console.log( noAlguien );
 
 
 
