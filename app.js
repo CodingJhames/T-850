@@ -185,7 +185,7 @@ let body = [ "cabeza","cuello", ...parts, "pies", "dedos" ];
 
 console.log( body );
 
-function ente( nombre ) {
+/* function ente( nombre ) {
 
     if ( typeof new.target !== "undefined" ) {
         this.nombre = nombre;
@@ -199,7 +199,7 @@ function ente( nombre ) {
 
 let alguien = new ente("Chepito");
 
-let noAlguien = ente.call( alguien,"Parchita");
+let noAlguien = ente.call( alguien,"Parchita"); */
 
 // console.log( alguien );
 // console.log( noAlguien );
@@ -225,6 +225,16 @@ var manejador = {
 manejador.init();
 
 
+let arreglo = [ 5,10,11,2,1,9,20];
+
+let ordenado = arreglo.sort( function(a, b ) {
+    return a-b;
+})
+
+let ordenadoES6 = arreglo.sort( ( a, b) => a-b );
+
+console.log(ordenado);
+console.log( ordenadoES6  );
 
 
 
