@@ -160,14 +160,30 @@ console.log( person1 );
 let personCopy = { ...person };
 personCopy.name = 'Bernal';
 
+function saludarRest( saludo, ...nombres ) {
+    
+    for( i in nombres ){
+        console.log( `${saludo} ${nombres[i]}`)
+    }
+
+}
+
+function saludarSpread( saludo, ...nombres ) {
+    console.log( `${saludo} ${nombres}`);
+}
+
+saludarRest( "Hola", "Parchita","Chepito","Gata mami" );
+
+let pets = [ "jerry", "cacho", "candas","orejas" ];
+
+saludarSpread( "Que tal!", pets );
 
 
+let parts = [ "brazos","piernas"];
+let body = [ "cabeza","cuello", ...parts, "pies", "dedos" ];
 
 
-
-
-
-
+console.log( body );
 
 
 
