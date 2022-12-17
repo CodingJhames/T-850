@@ -279,3 +279,67 @@ var personne = {
 
 personne.getName();
 
+/* nombres de propiedades computadas */
+
+var someOne = {};
+
+var nickName = "apellido";
+
+someOne["primer nombre"] = "Andrés" ;
+someOne[nickName] = "Bernal";
+
+console.log( someOne["primer nombre"] );
+console.log( someOne[ nickName ] );
+
+var lenom = "primer apellido";
+
+var apellido = "primer apellido";
+var individu = {
+    "primer nombre": "liz",
+    [apellido]: "clameran",
+}
+
+console.log( individu[ "primer nombre"] );
+console.log( individu[ apellido ]  );
+
+
+var subFijo = " nombre";
+
+var pessoa = {
+    [ "primer" + subFijo ]: "Parchita",
+    [ "segundo" + subFijo ]: "Chepito",
+}
+
+console.log(  pessoa[ "primer nombre"] );
+console.log(  pessoa[ "segundo" + subFijo ] );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
