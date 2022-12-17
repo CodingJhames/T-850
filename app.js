@@ -268,5 +268,14 @@ var Doris = crearPersona( "Doris", "Aparicio", 57 );
 console.log( Doris );
 
 
+/* metodos concisos */
 
+var personne = {
+    name: "Sebastian",
+    getName() {
+        console.log( this.name );
+    }
+}
+
+personne.getName();
 
