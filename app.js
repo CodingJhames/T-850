@@ -251,11 +251,21 @@ function ejemplo( x, y) {
 
 ejemplo( 10, 20 );
 
+var objeto = {
+    nombre: "Doris"
+}
 
+function crearPersona(nombre, apellido, edad) {
+    return  {
+        nombre: nombre,
+        apellido: apellido,
+        edad: edad
+    }
+}
 
+var Doris = crearPersona( "Doris", "Aparicio", 57 );
 
-
-
+console.log( Doris );
 
 
 
