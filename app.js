@@ -236,7 +236,20 @@ let ordenadoES6 = arreglo.sort( ( a, b) => a-b );
 console.log(ordenado);
 console.log( ordenadoES6  );
 
+var restar = ( a, b ) => a - b;
 
+console.log( typeof restar );
+console.log( restar instanceof Function );
+
+// var restar_two = new restar( 1, 2 );
+
+function ejemplo( x, y) {
+    ( (a,b) => {
+        console.log( arguments[0] );
+    } )();    
+}
+
+ejemplo( 10, 20 );
 
 
 
