@@ -313,10 +313,27 @@ var pessoa = {
 console.log(  pessoa[ "primer nombre"] );
 console.log(  pessoa[ "segundo" + subFijo ] );
 
+function mix(receptor, donator) {
+    Object.keys( donator ).forEach( function (key) {
+        receptor[key] = donator[key];
+    });
 
+    return receptor;
+}
 
+var receptor = {};
+var donator = {
+    // name: "my-file.js"
+    get name() {
+        return "my-file.js"
+    }
+}
 
+console.log( donator.name );
+console.log( donator );
+// console.log( mix( receptor, donator  )  );
 
+console.log( Object.assign( receptor, donator ) );
 
 
 
