@@ -361,8 +361,33 @@ for (const i in Object.keys( object ) ) {
 }
 
 
+let gato = {
+    sonido(){
+        console.log('meow');
+    },
+    chillido(){
+        console.log('miau');
+    }
+};
 
+let perro = {
+    sonido(){
+        console.log('guau');
+    },
+};
 
+let angora = Object.create(  gato );
+console.log( Object.getPrototypeOf( angora ) === gato );
+
+angora.sonido();
+angora.chillido();
+
+Object.setPrototypeOf( angora, perro );
+
+console.log( Object.getPrototypeOf( angora ) === gato );
+
+angora.sonido();
+angora.chillido();
 
 
 
