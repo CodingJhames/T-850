@@ -360,6 +360,7 @@ for (const i in Object.keys( object ) ) {
     
 }
 
+/* POO en ES6 */
 
 let gato = {
     sonido(){
@@ -387,11 +388,25 @@ Object.setPrototypeOf( angora, perro );
 console.log( Object.getPrototypeOf( angora ) === gato );
 
 angora.sonido();
-angora.chillido();
+// angora.chillido();
 
+/* acceso al protoypo con la referencia SUPER */
 
+let chamo = {
+    saludar(){
+        return "Hola";
+    }
+};
 
+let amico = {
+    saludar(){
+        return super.saludar() + ", saludos";
+    }
+};
 
+// Object.setPrototypeOf( amico, chamo );
+
+console.log( amico.saludar() )
 
 
 
