@@ -406,10 +406,28 @@ let amico = {
 
 // Object.setPrototypeOf( amico, chamo );
 
-console.log( amico.saludar() )
+// console.log( amico.saludar() );
 
 
+/* Desestructuracion de objetos */
 
+let ajustes = {
+    nombre: "James Mejía",
+    email: "james@google.com",
+    facebook: "james.mejia.0421",
+    google: "james.mejia.0421",
+    premium: true,
+    twitter: "codingjames"
+};
+
+/* let nombre = ajustes.nombre,
+    email = ajustes.email,
+    facebook = ajustes.facebook; */
+
+
+let {nombre, email, facebook,google, premium: dePago, twitter: cuentaTwi = "codingjhames"  } = ajustes;
+
+console.log(nombre, email, facebook, google, dePago, cuentaTwi );
 
 
 
