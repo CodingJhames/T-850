@@ -469,7 +469,36 @@ console.log( otroSuperNodo );
 let anotherSuperNodo = autoGuardado.otroNodo.subNodo.cursor;
 console.log(anotherSuperNodo  );
 
+/* Desestructuracion de arreglos */
 
+let frutas = ['pera','uva','naranjas','cerezas'];
 
+let [ fruta1, fruta2 ] = frutas;
+
+console.log( fruta1, fruta2  );
+
+let [,,fruta3] = frutas;
+console.log( fruta3 );
+
+let otraFruta = 'manzana';
+
+[ otraFruta ] = frutas;
+console.log( otraFruta );
+
+let a = 1;
+let b = 2;
+let temp;
+
+temp = a;
+a = b;
+b = temp;
+
+console.log( a, b );
+
+[a,b] = [ b,a];
+
+console.log( a, b );
+
+let arrObjects = [{}];
 
 
