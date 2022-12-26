@@ -501,4 +501,14 @@ console.log( a, b );
 
 let arrObjects = [{}];
 
+/* Desestructuracion de arreglos anidados */
 
+let colores_one = [ 'rojo',['verde','amarillo'],'morado','naranja'];
+let [ color1,[color2]  ] = colores_one;
+console.log( color1, color2 );
+
+let colores_dos = ['rojo','verde','amarillo','morado','naranja'];
+let [ colorPrincipal, colorSecundario, ...demasColores ] = colores_dos;
+console.log( colorPrincipal );
+console.log( colorSecundario );
+console.log( demasColores );
