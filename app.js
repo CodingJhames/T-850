@@ -524,3 +524,22 @@ let opciones = {
 
 let { nuome, appel = 'Mejía' } = opciones;
 console.log( nuome, appel );
+
+/* Desestructuracion de parametros */
+
+function createPlayer( nickname,{ hp, sp, clase } = { hp: 100, sp: 50, clase: 'mago' }  ) {
+    
+    /* options = options || {};
+
+    let hp = options.hp,
+        sp = options.sp,
+        clase = options.clase; */
+
+    console.log( nickname, hp, sp, clase );   
+}
+
+createPlayer( "Bernie", {
+    hp: 500,
+    sp: 100,
+    clase: 'warrior'
+} );
