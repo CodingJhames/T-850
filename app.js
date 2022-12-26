@@ -512,3 +512,15 @@ let [ colorPrincipal, colorSecundario, ...demasColores ] = colores_dos;
 console.log( colorPrincipal );
 console.log( colorSecundario );
 console.log( demasColores );
+
+let fruits = [ 'cherry', 'pera' ];
+let [ fruta_one, fruta_two = 'manzana' ] = fruits;
+console.log( fruta_one, fruta_two );
+
+let opciones = {
+    nuome:'Omar',
+    appel: 'Bernal'
+};
+
+let { nuome, appel = 'Mejía' } = opciones;
+console.log( nuome, appel );
