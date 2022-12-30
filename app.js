@@ -543,3 +543,43 @@ createPlayer( "Bernie", {
     sp: 100,
     clase: 'warrior'
 } );
+
+/* Symbols */
+
+let primerNombre = Symbol('primer nombre');
+let segNombre = Symbol( 'segundo nombre');
+
+
+let gente = {
+    [ segNombre ]:'Herrera'
+};
+
+gente[ primerNombre ] = 'Parchita';
+
+console.log( gente[primerNombre] );
+console.log( gente[segNombre] );
+console.log( primerNombre );
+console.log( segNombre );
+
+let simbolo_one = Symbol('simbolo');
+let simbolo_dos = Symbol('simbolo');
+
+console.log( simbolo_one == simbolo_dos );
+console.log( simbolo_one === simbolo_dos );
+console.log( Object.is( simbolo_one, simbolo_dos ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
