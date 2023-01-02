@@ -568,6 +568,47 @@ console.log( simbolo_one == simbolo_dos );
 console.log( simbolo_one === simbolo_dos );
 console.log( Object.is( simbolo_one, simbolo_dos ) );
 
+let userID = Symbol.for('userID');
+let objecto = {};
+
+objecto[userID] = '12345';
+console.log( objecto[userID] );
+console.log(userID);
+
+let userID2 = Symbol.for('userID');
+console.log( userID2 == userID2 );
+console.log( userID2 === userID2 );
+console.log( Object.is( userID, userID2 ) );
+
+console.log( objecto[ userID2 ]  );
+console.log(  userID2 );
+
+let id = Symbol.for('id único');
+console.log( Symbol.keyFor( id ) );
+
+let id2 = Symbol.for('id único');
+console.log( Symbol.keyFor( id2 ) );
+
+console.log( id === id2 );
+
+let id3 = Symbol( 'id único');
+console.log( Symbol.keyFor( id3 ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
