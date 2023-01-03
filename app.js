@@ -594,10 +594,19 @@ console.log( id === id2 );
 let id3 = Symbol( 'id único');
 console.log( Symbol.keyFor( id3 ) );
 
+/* Coerción de Símbolos */
 
+let Id = Symbol.for("id");
+let namba = 10;
+let testo = "10";
+let bool  = true;
+let NotAn = NaN;
 
-
-
+console.log( namba + testo );
+console.log( namba + Number( testo ) );
+console.log( namba + NaN );
+console.log( bool + bool );
+console.log( "My Simbol is: " + String( Id )  );
 
 
 
