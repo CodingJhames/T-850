@@ -635,7 +635,19 @@ for ( i in simbols ) {
     console.log( simbols[i], Symbol.keyFor( simbols[i] ) );
 }
 
+/* Sets */
 
+let items = new Set([1,2,3,4,5,6,7,7,7,7]);
+
+items.add(10);
+items.add(9);
+items.add(8);
+items.add(7);
+items.add(11);
+
+console.log(items.size);
+console.log( items );
+console.log( items.has( 7 ) );
 
 
 
