@@ -649,12 +649,21 @@ console.log(items.size);
 console.log( items );
 console.log( items.has( 7 ) );
 
+/* removiendo valores en Set */
 
+let things = new Set([1,2,3,4,5]);
 
+console.log( things.size );
 
+things.delete(3);
 
+console.log( things.size );
+console.log( things );
 
+things.clear();
 
+console.log( things.size );
+console.log( things );
 
 
 
