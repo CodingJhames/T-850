@@ -608,7 +608,32 @@ console.log( namba + NaN );
 console.log( bool + bool );
 console.log( "My Simbol is: " + String( Id )  );
 
+/* Recuperando las propiedades símbolo */
 
+let aid = Symbol.for('aid');
+let active = Symbol.for('active');
+
+let nikka = {
+    [aid]: '123',
+    [active]: true,
+    ['code']: 'xy123',
+    name:'micho',
+    apellido: 'mejia',
+    edad: 29
+};
+
+console.log( Object.keys( nikka ) );
+
+for ( key in nikka ) {
+    console.log( key, nikka[key] );
+}
+
+let simbols = Object.getOwnPropertySymbols( nikka );
+console.log( simbols );
+
+for ( i in simbols ) {
+    console.log( simbols[i], Symbol.keyFor( simbols[i] ) );
+}
 
 
 
