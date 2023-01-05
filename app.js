@@ -673,7 +673,45 @@ parsons.forEach( function( valor, llave, setOriginal ) {
     
     console.log( valor, llave, setOriginal );
     console.log( parsons === setOriginal  );
+
 } )
+
+/* Convertir Set en Array */
+
+let arrreglo = [ 1,2,3,4,5,6 ];
+let arrreglo_dos = [ 1,2,3,4,5,6,7,7,7,7,8,9,9,9,9,10,11,12 ];
+
+let setNumeros = new Set( arrreglo );
+console.log( setNumeros );
+
+let arrayNumeros = [...setNumeros ];
+console.log( arrayNumeros );
+
+let arrNumeros = eliminaDuplicados( arrreglo_dos );
+console.log( arrNumeros );
+
+/* function eliminaDuplicados( items ) {
+    
+    let set = new Set( items );
+    return [...set];
+} */
+
+// forma sintetizada
+
+function eliminaDuplicados( items ) {
+    
+    return [... new Set( items ) ];
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
