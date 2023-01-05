@@ -665,7 +665,15 @@ things.clear();
 console.log( things.size );
 console.log( things );
 
+/* forEach en los Sets */
 
+let parsons = new Set([ 'Fernando', 'María', 'Susana' ]);
+
+parsons.forEach( function( valor, llave, setOriginal ) {
+    
+    console.log( valor, llave, setOriginal );
+    console.log( parsons === setOriginal  );
+} )
 
 
 
