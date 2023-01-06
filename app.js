@@ -799,9 +799,27 @@ for( person of arrPersons ){
     console.log( person.edad );
 }
 
+/* Clases */
 
+function Persona( nombre ) {
+    this.nombre = nombre;
 
+    this.gritarNombre = function() {
+        console.log( this.nombre.toUpperCase() );
+    }
+};
 
+Persona.prototype.decirNombre = function () {
+    console.log( this.nombre );
+};
+
+let james = new Persona('nombre');
+
+james.gritarNombre();
+james.decirNombre();
+
+console.log( james instanceof Persona );
+console.log( james instanceof Object );
 
 
 
