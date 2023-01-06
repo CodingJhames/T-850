@@ -751,9 +751,10 @@ console.log( mapa  );
 mapa.clear();
 console.log( mapa );
 
+/* Inicialización de los Mapas */
 
-
-
+let mapina = new Map(  [ ["nombre","Parchita"], ["edad", 3 ] ] );
+console.log( mapina );
 
 
 
