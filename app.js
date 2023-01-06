@@ -756,6 +756,48 @@ console.log( mapa );
 let mapina = new Map(  [ ["nombre","Parchita"], ["edad", 3 ] ] );
 console.log( mapina );
 
+/* Maps- forEach */
+
+let mapeiro = new Map(  [ ["nombre","Parchita"], ["edad", 3 ] ] );
+
+mapeiro.forEach( function( value, key, mapOrigin ) {
+    console.log( `Llave: ${key}, Valor: ${ value }`);
+    console.log( mapOrigin );
+}  );
+
+mapeiro.forEach( ( value, key ) => {
+    console.log( `${key},${ value }` );
+}  );
+
+/* Maps - forOf */
+
+let numArr = [10,20,30,40,50,60];
+
+for (let i = 0; i < numArr.length; i++) {
+    console.log( numArr[i] );
+    
+};
+
+for( let i in numArr ){
+    console.log( numArr[i] );
+};
+
+for( let numero of numArr  ){
+    console.log( numero );
+};
+
+let arrPersons = [
+    {nombre:"Micho", edad: 8 },
+    {nombre:"Chepito", edad: 3 },
+    {nombre:"Tota Mami", edad: 6 },
+    {nombre:"Parchita", edad: 3 },
+    {nombre:"Thunder", edad: 3 },
+];
+
+for( person of arrPersons ){
+    console.log( person.nombre );
+    console.log( person.edad );
+}
 
 
 
