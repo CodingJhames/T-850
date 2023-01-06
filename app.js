@@ -703,6 +703,66 @@ function eliminaDuplicados( items ) {
     return [... new Set( items ) ];
 }
 
+/* weaksets */
+
+
+let nuevo_set = new WeakSet();
+
+let persona_one = {
+    nombre: 'Chepito Mejia'
+};
+
+let persona_dos = {
+    nombre_dos: 'Parchita Mejia'
+};
+
+nuevo_set.add( persona_one );
+nuevo_set.add( persona_dos );
+
+nuevo_set.delete( persona_one );
+console.log( nuevo_set );
+
+/* Maps */
+
+/* Métodos de mapas */
+
+let mapa = new Map(  );
+
+mapa.set( "nombre", "Parchita" );
+mapa.set( "edad", 3 );
+mapa.set( "apellido" );
+// mapa.set( {}, {hola:"hola Parchis"} );
+
+console.log( mapa );
+console.log( mapa.size );
+
+console.log( mapa.get("nombre")  );
+console.log( mapa.get("edad") );
+console.log( mapa.has("edad") );
+console.log( mapa.has("apellido")  );
+
+mapa.delete("nombre");
+console.log( mapa.has("nombre") );
+console.log( mapa.get("nombre") );
+
+mapa.set("edad");
+console.log( mapa  );
+
+mapa.clear();
+console.log( mapa );
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
