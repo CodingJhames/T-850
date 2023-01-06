@@ -821,6 +821,28 @@ james.decirNombre();
 console.log( james instanceof Persona );
 console.log( james instanceof Object );
 
+class Parson{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+
+    decirNombre( ){
+        console.log( this.nombre )
+    };
+};
+
+
+let James = new Persona('James');
+James.decirNombre();
+
+console.log( James instanceof Parson );
+console.log( James instanceof Object );
+
+console.log( typeof Parson );
+console.log( typeof Parson.prototype.decirNombre )
+
+
+
 
 
 
