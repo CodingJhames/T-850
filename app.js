@@ -868,6 +868,63 @@ let pobreTran = new Chamo();
 console.log( typeof pobreTran );
 console.log( pobreTran instanceof Chamo );
 
+/* Clases como parámetro */
+
+function creadorClases( definicionClase) {
+    return new definicionClase();
+}
+
+let someThing = creadorClases( class{
+
+    constructor(){
+        this.nombre = undefined,
+        this.edad = 30;
+    }
+
+    saludar(){
+        console.log('Greetings');
+    }
+
+} );
+
+
+someThing.saludar();
+
+class Square{
+    constructor(lado){
+        this.lado = lado;
+    }
+
+    getArea(){
+        return this.lado * this.lado;
+    }
+};
+
+function printCuadrado( square ) {
+
+    if ( !(square instanceof Square) ) {
+        console.error( 'El parámetro enviado no es un cuadrado' );
+        return;
+    }
+
+    console.log( Square.getArea() );
+}
+
+let mesa = '123';
+
+// let mesa = new Square(10);
+printCuadrado( mesa );
+
+
+
+
+
+
+
+
+
+
+
 
 
 
