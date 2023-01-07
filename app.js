@@ -841,9 +841,32 @@ console.log( James instanceof Object );
 console.log( typeof Parson );
 console.log( typeof Parson.prototype.decirNombre )
 
+/* Clases como expresiones */
 
+let myFunction = function() {
+    console.log('Hello Parchis');
+}
 
+let anotherFunction = myFunction;
+console.log( typeof anotherFunction );
 
+anotherFunction();
+
+let Chamo = class{
+    constructor(){
+        this.nombre = "",
+        this.edad = 30,
+        this.address = 'Calle falsa 123'
+    }
+
+    sayName(){
+        console.log('Hello Chepe');
+    }
+};
+
+let pobreTran = new Chamo();
+console.log( typeof pobreTran );
+console.log( pobreTran instanceof Chamo );
 
 
 
