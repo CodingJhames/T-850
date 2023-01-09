@@ -916,6 +916,36 @@ let mesa = '123';
 printCuadrado( mesa );
 
 
+/* static members & computed methods */
+let methodName = 'ScreamName';
+
+
+class Personne {
+    constructor( nombre ){
+        this.nombre = nombre;
+    }
+
+    decirNombre(){
+        console.log( this.nombre );
+    } 
+
+    [ methodName ](){
+        console.log( this.nombre.toUpperCase() );
+    }
+
+    static crear( nombre ){
+        return new Personne( nombre );
+    }
+
+}
+
+let codingJames = Personne.crear('James');
+console.log( codingJames );
+
+
+
+
+
 
 
 
