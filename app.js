@@ -954,7 +954,7 @@ class Rectangulo{
     }
 
     getArea(){
-        return this.alto * this.largo;
+        return "Rectángulo: " + this.alto * this.largo;
     }
 
 }
@@ -966,6 +966,11 @@ class Cuadrado extends Rectangulo {
     constructor( alto ){
         super( alto, alto ); 
     }
+
+    getArea(){
+        // return "Cuadrado: " + (this.alto * this.alto);
+        return super.getArea();
+    }
 }
 
 let cuadrado = new Cuadrado( 3 );
@@ -975,7 +980,7 @@ console.log( cuadrado.getArea() );
 console.log( cuadrado instanceof Cuadrado );
 console.log( cuadrado instanceof Rectangulo );
 
-
+/* sobreescribiendo las propiedades del padre */
 
 
 
