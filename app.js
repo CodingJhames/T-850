@@ -980,8 +980,28 @@ console.log( cuadrado.getArea() );
 console.log( cuadrado instanceof Cuadrado );
 console.log( cuadrado instanceof Rectangulo );
 
-/* sobreescribiendo las propiedades del padre */
+/* Promesas */
 
+function tareaAsync( ) {
+    setTimeout(() => {
+        console.log('procesos Asincrono terminado');
+        resolve();
+        reject();
+    }, 1300);
+}
+
+tareaAsync();
+console.log('Proceso secuencial');
+
+
+
+function resolve() {
+    console.log('Todo OK!');
+}
+
+function reject() {
+    console.log('Todo Maluco!');
+}
 
 
 
