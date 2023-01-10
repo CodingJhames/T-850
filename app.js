@@ -1005,7 +1005,6 @@ function(){
 
 console.log('Proceso secuencial');
 
-
 /* 
 function resolve() {
     console.log('Todo OK!');
@@ -1014,6 +1013,7 @@ function resolve() {
 function reject() {
     console.log('Todo Maluco!');
 } */
+
 
 
 
