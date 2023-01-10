@@ -983,25 +983,37 @@ console.log( cuadrado instanceof Rectangulo );
 /* Promesas */
 
 function tareaAsync( ) {
-    setTimeout(() => {
-        console.log('procesos Asincrono terminado');
-        resolve();
-        reject();
-    }, 1300);
+
+    let promesa = new Promise( ( resolve, reject ) => {
+
+        setTimeout(() => {
+            console.log('procesos Asincrono terminado');
+            resolve();
+        }, 1300);
+
+    } )
+
+    return promesa;
 }
 
-tareaAsync();
+tareaAsync().then( function(){
+    console.log('Todo OK!');
+},
+function(){
+    console.error('Todo Maluco!');
+});
+
 console.log('Proceso secuencial');
 
 
-
+/* 
 function resolve() {
     console.log('Todo OK!');
 }
 
 function reject() {
     console.log('Todo Maluco!');
-}
+} */
 
 
 
